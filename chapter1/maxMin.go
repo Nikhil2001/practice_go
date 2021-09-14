@@ -1,8 +1,9 @@
 package main
 
-import "fmt"
-import "os"
-import "strconv"
+import ("fmt"
+        "os"
+        "strconv"
+)
 
 func minMax() {
 	var min,max int64
@@ -10,6 +11,7 @@ func minMax() {
         k,_ := strconv.ParseInt(v,10,64)
 		if i == 0{
 			min,max = k,k
+			continue 
 		}
 		if k < min {
 			min = k 
