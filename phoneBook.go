@@ -39,7 +39,10 @@ func main() {
 			fmt.Println(*found)
 		}
 	default :
-		fmt.Println("Not supported for now, try search or list")		 
+		fmt.Println("Not supported for now, try search or list as below")
+	//	bin := path.Base(os.Args[0])
+	//	fmt.Printf("%s search | list \n",bin)	
+		fmt.Printf("%s search | list \n",os.Args[0])		 
 	}
 
 }
