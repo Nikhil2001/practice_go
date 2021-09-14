@@ -8,7 +8,7 @@ import ("fmt"
 func minMax() {
 	var min,max int64
 	for i,v := range os.Args[1:] {
-        k,_ := strconv.ParseInt(v,10,64)
+        k,_ := strconv.ParseInt(v,10,0) //same as strconv.Atoi(v)
 		if i == 0{
 			min,max = k,k
 			continue 

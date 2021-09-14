@@ -12,8 +12,9 @@ func main() {
 	fmt.Scanln(&inputUser1,&inputUser2)
 	fmt.Println(inputUser1)
 	fmt.Println(inputUser2) //TODO! play with fmt package 
-*/
+
 	//get args passed to program
-    minMax()
+    minMax()*/
+	countInputTypes()
 
 }
