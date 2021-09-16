@@ -65,3 +65,23 @@ func main() {
 	//program := "go"
 
 }
+
+
+/*OUTPUT
+
+int 9
+1 2 10
+ ""
+nikhil
+head in telugu language
+nikhil 0 0 false
+"nikhil"
+0
+false
+0
+s (string) ""
+(0+0i)
+0
+false 0
+"" ""
+*/
