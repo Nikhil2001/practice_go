@@ -63,7 +63,7 @@ func dataTypeExamples(){
 		employee bool = false
 		age int = 27
         name string = "nikhil"
-	    weight  float64 = 70.5
+	    weight  float64 = 70.
 	)
 	fmt.Printf("%T %v %t\n",employee,employee,employee)
 	fmt.Printf("%T %v %f\n",weight,weight,weight)
@@ -71,7 +71,8 @@ func dataTypeExamples(){
 	fmt.Printf("I am %[2]v mara, age %[1]v\n",age,name)
 	fmt.Printf("%[1]T %[1]v %[1]d\n",age)
 	fmt.Printf("precision of float %f, %.0f,%.1f %.2f\n",weight,weight,weight,weight)
-    fmt.Printf("value of pi %f, %.2[1]f %[1]v\n",3.14)
+    fmt.Printf("value of pi %f, %[1]f, %.2[1]f %[1]v\n",3.14)
+
 /*OUTPUT
 bool false false
 float64 70.5 70.500000
@@ -84,6 +85,6 @@ value of pi 3.140000, 3.14 3.14
 }
 
 func main() {
- 
+	dataTypeExamples()	
 }
 
