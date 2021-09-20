@@ -18,7 +18,7 @@ func check(a,b int) error {
 }
 func main() {
 
-	err := check(0,0)
+	var err error = check(0,0)
 
 	if err != nil{
 		fmt.Println(err)
