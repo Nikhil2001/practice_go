@@ -33,7 +33,6 @@ f("%q \n",s.TrimFunc("nik222hihm",trimNonIntegers))
 
 
 /*
-
 nikhil@nikhil:~/practice_go/chapter2$ go doc strings.TrimFunc
 package strings // import "strings"
 
@@ -54,6 +53,4 @@ true
 ["mara" "nikhil" "reddy"] 
 ["nikh" "ih" "m"] 
 "222" 
-
-
 */
