@@ -16,6 +16,8 @@ func check(a,b int) error {
 	}
 	return nil
 }
+
+
 func main() {
 
 	var err error = check(0,0)
