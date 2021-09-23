@@ -17,7 +17,8 @@ func deleteElement(a []int, b int) {
 	}
 
 	if k != -1 {
-		a = append(a[:k], a[k+1:]...)
+		b :=a[:k]
+		a = append(b, a[k+1:]...)
 	}
 	
 }
