@@ -52,3 +52,18 @@ func main(){
 
 
 }
+
+
+/*OUTPUT:
+true
+false &{(0+0i) 0}
+&{field1:(0+0i) field2:0} 
+&main.aStructure{field1:(0+0i), field2:0} 
+0xc000014270 0xc000014280 
+{(0+0i) 0}
+<nil>
+0xc00001c110
+824633835792
+824633835800
+824633835808
+*/
