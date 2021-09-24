@@ -46,3 +46,21 @@ func main() {
 	}
 
 }
+
+
+/*
+nikhil@nikhil:~/practice_go/chapter3$ go run map.go 
+map[]
+true
+map[]
+false
+map[]
+false
+map[int]string{1:"one", 2:"two"}
+2
+"",false
+"two",true
+2 ---> two
+1 ---> one
+
+*/
