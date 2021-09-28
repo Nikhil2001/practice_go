@@ -21,7 +21,7 @@ func main() {
 		fmt.Println(err)
 	}
 	defer f.Close()
-	lines, err := csv.NewReader(f).ReadAll()
+	lines, err := csv.NewReader(f).ReadAll() // returns [][]string
 
 	if err != nil {
 		fmt.Println(err)
@@ -39,8 +39,7 @@ func main() {
 
 	for _, line := range lines {
 		fmt.Println(line)
-		temp :=[]string(line)
-		err = csvWriter.Write(temp)
+		err = csvWriter.Write(line)
 		if err1 != nil {
 			fmt.Println(err)
 		}
