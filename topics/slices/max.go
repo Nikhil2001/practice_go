@@ -2,7 +2,7 @@ package slice
 
 import "fmt"
 
-func max(nums []int) (int,error) {
+func Max(nums []int) (int,error) {
 
 	if len(nums) == 0 {
 		return 0, fmt.Errorf("%#v slice has no elements",nums)
@@ -12,7 +12,7 @@ func max(nums []int) (int,error) {
 		return nums[0], nil
 	}
 
-	max := num[0]
+	max := nums[0]
 
 
 	for _,v := range nums[1:] {

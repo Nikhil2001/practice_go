@@ -8,12 +8,11 @@
 	func Max(n []int) (int, error)
 */
 
-package max_test
+package slice_test
 
 import (
 	"testing"
-
-	"github.com/ardanlabs/gotraining/topics/go/algorithms/slices/max"
+	"github.com/Nikhil2001/practice_go/topics/slices/slice"
 )
 
 const succeed = "\u2713"
@@ -39,7 +38,7 @@ func TestMax(t *testing.T) {
 			tf := func(t *testing.T) {
 				t.Logf("\tTest %d:\tWhen checking the %q state.", testID, test.name)
 				{
-					got, err := max.Max(test.input)
+					got, err := slice.Max(test.input)
 					switch test.success {
 					case true:
 						if err != nil {
