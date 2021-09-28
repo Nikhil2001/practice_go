@@ -44,12 +44,14 @@ func main() {
 	for i, v := range cMap {
 		fmt.Println(i, "--->", v)
 	}
+	delete(cMap, 2)
+
+	fmt.Println("after deleting element", cMap)
 
 }
 
-
 /*
-nikhil@nikhil:~/practice_go/chapter3$ go run map.go 
+nikhil@nikhil:~/practice_go/chapter3$ go run map.go
 map[]
 true
 map[]
@@ -60,7 +62,8 @@ map[int]string{1:"one", 2:"two"}
 2
 "",false
 "two",true
-2 ---> two
 1 ---> one
+2 ---> two
+after deleting element map[1:one]
 
 */
