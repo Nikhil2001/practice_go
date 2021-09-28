@@ -12,6 +12,7 @@ func matchString(nameString string) bool {
 	return re.Match(byteSlice)
 
 }
+
 func main() {
 
 	if len(os.Args) !=2 {
