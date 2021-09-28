@@ -6,6 +6,12 @@ import (
 	"regexp"
 )
 
+func matchInt(numString string) bool {
+	byteSlice := []byte(numString)
+	re := regexp.MustCompile(`^[-+]?\d+$`)
+	return re.Match(byteSlice)
+
+}
 func main() {
 
 	if len(os.Args) !=2 {
@@ -15,9 +21,6 @@ func main() {
 
 	numString := os.Args[1]
 	fmt.Println(numString)
-
-	byteSlice := []byte(numString)
-	re := regexp.MustCompile(`^[-+]?\d+$`)
-	fmt.Println("Matched :",re.Match(byteSlice))
+	fmt.Println("Matched :",matchInt(numString))
 
 }
