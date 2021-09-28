@@ -1,66 +1,40 @@
-/*
-	// This is the API you need to build for these tests. You will need to
-	// change the import path in this test to point to your code.
+package max
 
-	package max
-
-	// Max returns the maximum integer in the slice.
-	func Max(n []int) (int, error)
-*/
-
-package slice_test
-
-import (
-	"testing"
-	"github.com/Nikhil2001/practice_go/topics/slices/slice"
-)
-
-const succeed = "\u2713"
-const failed = "\u2717"
+import "testing"
 
 func TestMax(t *testing.T) {
-	tt := []struct {
-		name     string
-		input    []int
-		expected int
-		success  bool
+
+	testInputs := []struct {
+		name           string
+		inputSlice     []int
+		expectedOutput int
 	}{
-		{"empty", []int{}, 0, false},
-		{"nil", nil, 0, false},
-		{"one", []int{10}, 10, true},
-		{"even", []int{10, 30}, 30, true},
-		{"odd", []int{10, 50, 30}, 50, true},
+		{"test1",
+			[]int{1, 2, 3},
+			3,
+		},
+		{"test2",
+			[]int{-1, -2, -3},
+			-3,
+		},
+		{"test3",
+			[]int{-1},
+			-1,
+		},
+		{"test4",
+			[]int{},
+			0,
+		},
+	
 	}
 
-	t.Log("Given the need to test Max functionality.")
-	{
-		for testID, test := range tt {
-			tf := func(t *testing.T) {
-				t.Logf("\tTest %d:\tWhen checking the %q state.", testID, test.name)
-				{
-					got, err := slice.Max(test.input)
-					switch test.success {
-					case true:
-						if err != nil {
-							t.Fatalf("\t%s\tTest %d:\tShould be able to run Max without an error : %v", failed, testID, err)
-						}
-						t.Logf("\t%s\tTest %d:\tShould be able to run Max without an error.", succeed, testID)
-
-					case false:
-						if err == nil {
-							t.Fatalf("\t%s\tTest %d:\tShould have seen an error for Max.", failed, testID)
-						}
-						t.Logf("\t%s\tTest %d:\tShould have seen an error for Max.", succeed, testID)
-					}
-
-					if got != test.expected {
-						t.Logf("\t%s\tTest %d:\tShould have gotten back the right max value.", failed, testID)
-						t.Fatalf("\t\tTest %d:\tGot %v, Expected %v", testID, got, test.expected)
-					}
-					t.Logf("\t%s\tTest %d:\tShould have gotten back the right max value.", succeed, testID)
-				}
+	for _, tt := range testInputs {
+		f := func(t *testing.T) {
+			t.Logf("testing Max() with input %#v",tt.inputSlice)
+			if v, _ := Max(tt.inputSlice); tt.expectedOutput != v {
+				t.Errorf("max returns %d not %d", v,tt.expectedOutput)
 			}
-			t.Run(test.name, tf)
 		}
+		t.Run(tt.name, f)
 	}
 }

@@ -1,27 +1,25 @@
-package slice
+package max
 
 import "fmt"
 
-func Max(nums []int) (int,error) {
+func Max(numbers []int) (int, error) {
 
-	if len(nums) == 0 {
-		return 0, fmt.Errorf("%#v slice has no elements",nums)
+	if len(numbers) == 0 {
+		return 0, fmt.Errorf("%#v has no numbers", numbers)
 	}
 
-	if len(nums) == 1 {
-		return nums[0], nil
+	if len(numbers) == 1 {
+		return numbers[0], nil
 	}
 
-	max := nums[0]
+	max := numbers[0]
 
-
-	for _,v := range nums[1:] {
+	for _, v := range numbers[1:] {
 
 		if v > max {
 			max = v
 		}
 	}
 
-    return max,nil
-
+	return max, nil
 }
