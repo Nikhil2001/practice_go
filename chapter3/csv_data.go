@@ -36,6 +36,7 @@ func main() {
 	defer csvFile.Close()
 
 	csvWriter := csv.NewWriter(csvFile)
+	
 
 	for _, line := range lines {
 		fmt.Println(line)
