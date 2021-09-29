@@ -40,7 +40,7 @@ func main() {
 	fmt.Println("players in the squad: ", playerAges) //zero values
 
 	var playerNames [5]string
-	playerNames = names // can assign to same types i.e [5]int != [4]int
+	playerNames = names // can assign to same types 
 	fmt.Println("players batted: ", playerNames)
 
 }
