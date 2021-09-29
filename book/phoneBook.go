@@ -26,6 +26,7 @@ func search(name string) *contact{
 	}
 	return nil
 }
+
 func main() {
 
 	switch os.Args[1] {
