@@ -3,6 +3,7 @@ package main
 import (
 	"errors"
 	"fmt"
+	_ "os"
 )
 
 type Any interface{}
@@ -52,9 +53,14 @@ func main() {
 
 	PrintAnything("nikhil",1)
 
-	slice1 := []Any{1,2,3,"thing"}
+	slice1 := []interface{}{1,2,3,"thing"}
 	fmt.Println(slice1)
-	PrintAnything(slice1)
+	PrintAnything(slice1...)
 
+	slice2 := []int{1,2,3}
+	fmt.Println(slice2)
+	PrintAnything(slice2)
+
+	//PrintAnything(os.Args...)
 
 }
